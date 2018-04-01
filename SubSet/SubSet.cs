@@ -77,7 +77,7 @@ namespace SubSet
                 StatusPercent = 80;
                 foreach (var sub in Subs)
                 {
-                    sub.Movie = Movies.FirstOrDefault(m => m.Epizode == sub.Epizode);
+                    sub.Movie = Movies.FirstOrDefault(m => m.Epizode == sub.Epizode && sub.Path.Contains(m.DirectoryPath));
                 }
                 StatusPercent = 90;
                 StatusPercent = 0;
